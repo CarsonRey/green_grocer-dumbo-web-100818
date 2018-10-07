@@ -60,6 +60,10 @@ end
 def checkout(cart, coupons)
   cart.each do |item, item_hash|
     item_hash.each do |key, value|
+      consolidate_cart(cart)
+      apply_coupons
+      apply_clearance(cart)
+      
   end
 end
 end
