@@ -8,7 +8,7 @@ require 'pry'
        if !new_cart[item] 
          new_cart[item][key] = value
          new_cart[item][:count] = 1
-       elsif new_cart[item].include?(key) 
+       elsif new_cart[item]
          new_cart[item][:count] += 1 
        end
       end
