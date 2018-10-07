@@ -31,7 +31,7 @@ def apply_coupons(cart, coupons)
                   :price => cart[item][:price],
                   :clearance => true, 
                   :count => cart[item][:count] - coupon_hash[:num]}     
-     elsif !cart.keys.include?(coupon_hash[:item])
+     elsif cart.keys.include?(coupon_hash[:item]) == false
         new_cart[item] = item_hash
       end
       
