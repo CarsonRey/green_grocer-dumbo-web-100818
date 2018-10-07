@@ -71,6 +71,7 @@ end
 
 def checkout(cart, coupons)
   cart.collect do |cart_array|
+    binding.pry
      cart = consolidate_cart(cart: cart_array)
      cart = apply_coupons(cart: cart, coupons: coupons)
      cart = apply_clearance(cart: cart)
