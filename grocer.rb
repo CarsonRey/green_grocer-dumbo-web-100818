@@ -4,7 +4,7 @@ require 'pry'
   cart.each do |item_hash|
     item_hash.each do |item, info_hash|
       info_hash.each do |key, value|
-        
+        binding.pry
        if hash[item] == nil
          hash[item] = {key => value, :count => cart.count(item_hash)}
        elsif hash[item].include?(key) == false
