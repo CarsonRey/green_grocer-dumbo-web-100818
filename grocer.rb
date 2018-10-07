@@ -71,8 +71,8 @@ end
 
 def checkout(cart:[cart], coupons:[coupons])
      cart = consolidate_cart(cart)
-     cart = apply_coupons(cart: cart, coupons: coupons)
-     cart = apply_clearance(cart: cart)
+     cart = apply_coupons(cart, coupons)
+     cart = apply_clearance(cart)
       total = array_of_prices.inject(0) {|result, price| result + price}
       if total > 100
         total * 0.90.round
