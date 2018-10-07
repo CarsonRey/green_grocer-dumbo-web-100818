@@ -23,7 +23,8 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon_hash|
     coupon_hash.each do |key, value|
       if item == coupon_hash[:item] && cart[item][:count] >= coupon_hash[:num]
-        cart[item][:count] -= coupon_hash[:num] 
+        cart[item][:count] -= coupon_hash[:num]
+        if !cart.keys.include?()
           
      else
         new_cart[item] = item_hash
