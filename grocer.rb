@@ -69,7 +69,7 @@ def array_of_prices(cart) #creates an array of prices so we can add them togethe
 prices
 end
 
-def checkout(cart: [], coupons: [])
+def checkout(cart, coupons)
      cart = consolidate_cart(cart: cart)
      cart = apply_coupons(cart: cart, coupons: coupons)
      cart = apply_clearance(cart: cart)
