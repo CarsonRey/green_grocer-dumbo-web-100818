@@ -69,11 +69,11 @@ def array_of_prices(cart) #creates an array of prices so we can add them togethe
 prices
 end
 
-def checkout(cart, coupons)
+def checkout(cart: [], coupons: [])
   binding.pry
-     cart = consolidate_cart(cart)
-     cart = apply_coupons(cart, coupons)
-     cart = apply_clearance(cart)
+     cart = consolidate_cart(cart: cart)
+     cart = apply_coupons(cart: cart, coupons: coupons)
+     cart = apply_clearance(cart: cart)
       total = array_of_prices.inject(0) {|result, price| result + price}
       if total > 100
         total * 0.90.round
