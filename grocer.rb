@@ -57,8 +57,8 @@ def apply_clearance(cart)
   cart
 end
 
-def checkout(cart, coupons)
-     cart = consolidate_cart(cart: cart.keys)
+def checkout(cart:[], coupons:[])
+     cart = consolidate_cart(cart: cart)
      apply_coupons(cart, coupons)
      apply_clearance(cart)
       
