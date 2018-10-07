@@ -57,6 +57,18 @@ def apply_clearance(cart)
   cart
 end
 
+def array_of_prices(cart) #creates an array of prices so we can add them together to                         make the total
+  prices = []
+   cart.each do |item, item_hash|
+    item_hash.each do |key, value|
+        if key == :price
+        prices << value
+      end
+    end
+  end
+prices
+end
+
 def checkout(cart:[], coupons:[])
      cart = consolidate_cart(cart: cart)
      cart = apply_coupons(cart: cart, coupons: coupons)
