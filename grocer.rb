@@ -70,11 +70,11 @@ prices
 end
 
 def checkout(cart: [], coupons: [])
-  binding.pry
+
      cart = consolidate_cart(cart: cart)
      cart = apply_coupons(cart: cart, coupons: coupons)
      cart = apply_clearance(cart: cart)
-      total = array_of_prices.inject(0) {|result, price| result + price}
+      total = array_of_prices(cart).inject(0) {|result, price| result + price}
       if total > 100
         total * 0.90.round
       else
