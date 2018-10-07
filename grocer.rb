@@ -70,7 +70,7 @@ prices
 end
 
 def checkout(cart, coupons)
-     cart = consolidate_cart(cart:[cart])
+     cart = consolidate_cart(cart: cart)
      cart = apply_coupons(cart, coupons)
      cart = apply_clearance(cart)
       total = array_of_prices.inject(0) {|result, price| result + price}
