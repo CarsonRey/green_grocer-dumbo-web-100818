@@ -71,7 +71,7 @@ end
 
 def checkout(cart, coupons)
   binding.pry
-     cart = consolidate_cart(cart)
+     consolidate_cart(cart)
      cart = apply_coupons(cart, coupons)
      cart = apply_clearance(cart)
       total = array_of_prices.inject(0) {|result, price| result + price}
