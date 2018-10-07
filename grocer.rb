@@ -3,7 +3,7 @@ require 'pry'
   new_cart = {}
   cart.each do |item_hash|
     item_hash.each do |item, info|
-     ≈
+     
        if new_cart[item] 
          new_cart[item][:count] += 1 
        else
