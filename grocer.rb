@@ -4,11 +4,11 @@ require 'pry'
   cart.each do |item_hash|
     item_hash.each do |item, info|
       binding.pry
-       if !new_cart[item] 
+       if new_cart[item] 
+         new_cart[item][:count] += 1 
+       else
          new_cart[item] = info
          new_cart[item][:count] = 1
-       else
-         new_cart[item][:count] += 1 
        end
     end
   end
