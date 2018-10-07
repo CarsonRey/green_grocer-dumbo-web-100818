@@ -70,7 +70,8 @@ prices
 end
 
 def checkout(cart, coupons)
-     cart = consolidate_cart(cart: cart)
+  cart.each do |cart_array|
+     cart = consolidate_cart(cart: cart_array)
      cart = apply_coupons(cart: cart, coupons: coupons)
      cart = apply_clearance(cart: cart)
       total = array_of_prices(cart).inject(0) {|result, price| result + price}
@@ -79,6 +80,6 @@ def checkout(cart, coupons)
       else
       total
       end
-    
+    end
 end
 
