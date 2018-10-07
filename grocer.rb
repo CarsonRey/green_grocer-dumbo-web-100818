@@ -27,8 +27,10 @@ def apply_coupons(cart, coupons)
                   :price => coupon_hash[:cost],
                   :clearance => true,
                   :count => cart[item][:count] / coupon_hash[:num] }
-      
-      new_cart[item][:count] = cart[item][:count] -= coupon_hash[:num]       
+      new_cart[item] = {
+                :price => cart[item][:price],
+                :clearance => true, 
+                :count => cart[item][:count] - coupon_hash[:num]}     
      else
         new_cart[item] = item_hash
       end
