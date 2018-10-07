@@ -6,7 +6,7 @@ require 'pry'
        if !new_cart[item] 
          new_cart[item] = info
          new_cart[item][:count] = 1
-       elsif new_cart[item]
+       else
          new_cart[item][:count] += 1 
        end
     end
