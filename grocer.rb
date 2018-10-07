@@ -2,16 +2,13 @@ require 'pry'
  def consolidate_cart(cart)
   new_cart = {}
   cart.each do |item_hash|
-    item_hash.each do |item, info_hash|
-     info_hash.each do |key, value| 
-  
+    item_hash.each do |key, value|
        if !new_cart[item] 
          new_cart[item][key] = value
          new_cart[item][:count] = 1
        elsif new_cart[item]
          new_cart[item][:count] += 1 
        end
-      end
     end
   end
   new_cart
