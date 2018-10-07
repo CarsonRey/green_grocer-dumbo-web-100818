@@ -27,9 +27,9 @@ def apply_coupons(cart, coupons)
     name = coupon[:item]
     if cart[name] && cart[name][:count] >= coupon[:num] # cart[name] is a 'truthy' value, basically asking if it exists
       if cart["#{name} W/COUPON"]                     # <-- initially tried this while looping over the cart which isn't possible
-        cart["#{name} W/COUPON"][:count] += 1         # checking the double if statements and editing the original cart rules out any                                               need for describing original items
+        cart["#{name} W/COUPON"][:count] += 1         # checking the double if statements and editing the original cart rules out any 
+      else                                             #  need for describing original items
         
-      else
       cart["#{name} W/COUPON"] = {
         :count => 1,
         :price => coupon[:cost],
