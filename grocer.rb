@@ -1,6 +1,5 @@
 require 'pry'
  def consolidate_cart(cart)
-  hash = {}
   cart.each do |item_hash|
     item_hash.each do |item, info_hash|
       info_hash.each do |key, value|
@@ -13,7 +12,7 @@ require 'pry'
       end
     end
   end
-  hash
+  cart
 end
 
  # [
