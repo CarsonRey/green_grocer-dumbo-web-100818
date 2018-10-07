@@ -5,7 +5,7 @@ require 'pry'
         binding.pry
        if !cart[item][:count]
          cart[item][:count] += 1
-       elsif hash[item].include?(key) == false
+       elsif hash[item].include?(key) 
          hash[item][key] = value
        end
     end
