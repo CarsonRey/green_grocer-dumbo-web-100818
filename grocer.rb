@@ -5,8 +5,8 @@ require 'pry'
 
        if !cart[item][:count]
          cart[item][:count] += 1
-       elsif hash[item].include?(key) 
-         hash[item][key] = value
+       elsif cart[item].include?(key) 
+         
        end
     end
   end
