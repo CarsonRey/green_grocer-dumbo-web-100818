@@ -4,7 +4,7 @@ require 'pry'
   cart.each do |item_hash|
     item_hash.each do |item, info_hash|
      info_hash.each do |key, value| 
-        binding.pry
+  
        if !new_cart[item] 
          new_cart[item][key] = value
          new_cart[item][:count] = 1
