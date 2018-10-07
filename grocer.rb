@@ -70,7 +70,7 @@ prices
 end
 
 def checkout(cart, coupons)
-  cart.each do |cart_array|
+  cart.collect do |cart_array|
      cart = consolidate_cart(cart: cart_array)
      cart = apply_coupons(cart: cart, coupons: coupons)
      cart = apply_clearance(cart: cart)
