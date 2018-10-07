@@ -2,7 +2,7 @@ require 'pry'
  def consolidate_cart(cart)
   cart.each do |item_hash|
     item_hash.each do |item, info_hash|
-        binding.pry
+
        if !cart[item][:count]
          cart[item][:count] += 1
        elsif hash[item].include?(key) 
