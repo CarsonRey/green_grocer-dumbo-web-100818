@@ -22,6 +22,7 @@ def apply_coupons(cart, coupons)
  cart.each do |item, item_hash|
   coupons.each do |coupon_hash|
     coupon_hash.each do |key, value|
+      binding.pry
       if item == coupon_hash[:item] && cart[item][:count] >= coupon_hash[:num]
         cart[item][:count] -= coupon_hash[:num]
         if cart.keys.include?(["#{item} W/COUPON"]) == true
