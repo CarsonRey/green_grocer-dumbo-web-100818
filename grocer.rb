@@ -24,7 +24,8 @@ def apply_coupons(cart, coupons)
     coupon_hash.each do |key, value|
       if item == coupon_hash[:item] && cart[item][:count] >= coupon_hash[:num]
         cart[item][:count] -= coupon_hash[:num]
-        if !cart.keys.include?()
+        if !cart.keys.include?(["#{item} W/COUPON"])
+          
           
      else
         new_cart[item] = item_hash
